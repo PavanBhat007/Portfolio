@@ -19,9 +19,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
-
-const imageAltText = "desktop with books and laptop";
+import image from "../images/design-desk.png";
 
 /**
  * Project list
@@ -31,43 +29,45 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Canteen Billing System",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "A billing system successfully deployed in our college canteen, created using Flask and SQLite, with Javascript for some backend logic",
+    url: "https://github.com/PavanBhat007/BillingSystem",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Hospital Management System",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Created a ReactJS based Hospital Management System with a team of 4 members, using SQL for backend, in a 2-day 12hr hackathon.",
+    url: "https://github.com/PavanBhat007/Hospital-System",
   },
   {
-    title: "My Resume Site",
+    title: "My Portfolio Site",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Cretated a basic protfolio site with my information, using just Vanilla HTML, CSS and JS; hosted on Netlify",
+    url: "https://brilliant-trifle-88d9ec.netlify.app/",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Decentralized Image Sharing DApp",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "A decentralized software that allows users to conect to their metamask acocunts and share images.",
+    url: "https://github.com/PavanBhat007/3Drive",
   },
 ];
 
 const Portfolio = () => {
   return (
-    <section className="padding" id="portfolio">
+    <section
+      className="padding"
+      id="portfolio"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
-            src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
-            alt={imageAltText}
-          />
-        </div>
+        <div style={{ maxWidth: "40%", alignSelf: "center" }}></div>
         <div className="container">
           {projectList.map((project) => (
             <div className="box" key={project.title}>
